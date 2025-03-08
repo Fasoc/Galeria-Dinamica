@@ -1,0 +1,126 @@
+body {
+  background-color: #f2f2f2; 
+  font-family: 'Arial', sans-serif; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-top: 40px; 
+  text-transform: uppercase; 
+  font-weight: 600;
+  letter-spacing: 2px; 
+  background: linear-gradient(to right, #007BFF, #012347); 
+  background-clip: text;
+  color: transparent; 
+  padding: 10px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center; 
+  padding: 20px;
+  width: 80%; 
+  background-color: white; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.imagem {
+  position: relative;
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.imagem img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.remover {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center; 
+}
+
+#escolherArquivo, #adicionarImagem {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#escolherArquivo:hover, #adicionarImagem:hover {
+  transform: scale(1.1); 
+}
+
+#escolherArquivo:active, #adicionarImagem:active {
+  background-color: #0056b3;
+}
+
+#nomeArquivo {
+  font-size: 16px;
+  color: black;
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .imagem {
+    width: 100%; 
+    margin-top: 10px;
+  }
+
+  .imagem img {
+    width: 100%; 
+    height: auto; 
+  }
+}
+
+@media (max-width: 600px) {
+  #escolherArquivo, #adicionarImagem {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px; 
+  }
+}
